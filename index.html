@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Torrero General Service | General Apartment Remodeling & Painting NYC</title>
+<meta name="description" content="Torrero General Service - Professional apartment remodeling and painting in New York. Quality craftsmanship, honest pricing. Call (929) 633-2730." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{
+  --primary:#FF6B35;
+  --primary-dark:#E55525;
+  --secondary:#004E89;
+  --accent:#FFD23F;
+  --dark:#1A1A2E;
+  --light:#FAFAFA;
+  --gradient:linear-gradient(135deg,#FF6B35 0%,#F7931E 50%,#FFD23F 100%);
+  --gradient-blue:linear-gradient(135deg,#004E89 0%,#1B6CA8 100%);
+  --shadow:0 10px 40px rgba(0,0,0,0.1);
+  --shadow-lg:0 20px 60px rgba(0,0,0,0.15);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Poppins',sans-serif;
+  color:#333;
+  line-height:1.6;
+  overflow-x:hidden;
+  background:#fff;
+}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:700;}
+
+/* TOP BAR */
+.top-bar{
+  background:var(--dark);
+  color:#fff;
+  padding:8px 0;
+  font-size:14px;
+}
+.top-bar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.top-bar a{color:#fff;text-decoration:none;margin-right:18px;transition:color .3s;}
+.top-bar a:hover{color:var(--accent);}
+.top-bar i{margin-right:6px;color:var(--accent);}
+
+/* NAV */
+.navbar{
+  background:#fff;
+  box-shadow:0 2px 15px rgba(0,0,0,.08);
+  position:sticky;top:0;z-index:1000;
+  padding:15px 0;
+}
+.navbar .container{display:flex;justify-content:space-between;align-items:center;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-icon{
+  width:60px;height:60px;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.logo-icon img{width:100%;height:100%;object-fit:contain;display:block;}
+.logo-text{display:flex;flex-direction:column;}
+.logo-text .brand{font-family:'Playfair Display',serif;font-weight:800;font-size:22px;color:var(--dark);line-height:1;}
+.logo-text .sub{font-size:11px;color:var(--primary);font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+
+.nav-links{display:flex;gap:30px;list-style:none;align-items:center;}
+.nav-links a{
+  text-decoration:none;color:var(--dark);font-weight:500;
+  position:relative;transition:color .3s;
+}
+.nav-links a:hover{color:var(--primary);}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-6px;left:0;
+  width:0;height:2px;background:var(--primary);transition:width .3s;
+}
+.nav-links a:hover::after{width:100%;}
+.nav-cta{
+  background:var(--gradient);color:#fff !important;
+  padding:10px 22px;border-radius:50px;
+  font-weight:600 !important;
+  box-shadow:0 6px 18px rgba(255,107,53,.4);
+}
+.nav-cta::after{display:none !important;}
+.menu-toggle{display:none;background:none;border:none;font-size:26px;cursor:pointer;color:var(--dark);}
+
+.container{max-width:1240px;margin:0 auto;padding:0 24px;}
+
+/* HERO */
+.hero{
+  position:relative;
+  min-height:92vh;
+  display:flex;align-items:center;
+  background:linear-gradient(90deg,rgba(26,26,46,.65) 0%,rgba(26,26,46,.25) 60%,rgba(26,26,46,.15) 100%),url('0.webp');
+  background-size:cover;background-position:center;
+  color:#fff;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;top:-50%;right:-10%;
+  width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,210,63,.3) 0%,transparent 70%);
+  animation:float 6s ease-in-out infinite;
+}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(30px);}}
+.hero-content{position:relative;z-index:2;max-width:720px;}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.15);backdrop-filter:blur(10px);
+  padding:8px 18px;border-radius:50px;
+  font-size:13px;font-weight:600;letter-spacing:1px;
+  margin-bottom:20px;
+  border:1px solid rgba(255,255,255,.25);
+}
+.hero-badge i{color:var(--accent);}
+.hero h1{
+  font-size:clamp(2.4rem,5.5vw,4.5rem);
+  line-height:1.05;margin-bottom:22px;
+  text-shadow:0 4px 20px rgba(0,0,0,.3);
+}
+.hero h1 span{
+  background:linear-gradient(90deg,#FFD23F,#FF6B35);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.hero p{font-size:1.2rem;margin-bottom:30px;opacity:.95;max-width:600px;}
+.hero-buttons{display:flex;gap:16px;flex-wrap:wrap;}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:16px 32px;border-radius:50px;
+  text-decoration:none;font-weight:600;font-size:16px;
+  transition:all .3s;cursor:pointer;border:none;
+}
+.btn-primary{
+  background:var(--gradient);color:#fff;
+  box-shadow:0 10px 30px rgba(255,107,53,.4);
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(255,107,53,.6);}
+.btn-whatsapp{
+  background:#25D366;color:#fff;
+  box-shadow:0 10px 30px rgba(37,211,102,.4);
+}
+.btn-whatsapp:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(37,211,102,.6);background:#1FBA57;}
+.btn-outline{
+  background:rgba(255,255,255,.1);color:#fff;
+  border:2px solid #fff;backdrop-filter:blur(10px);
+}
+.btn-outline:hover{background:#fff;color:var(--secondary);}
+.btn-work{
+  background:var(--gradient-blue);color:#fff;
+  box-shadow:0 10px 30px rgba(0,78,137,.45);
+}
+.btn-work:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(0,78,137,.65);}
+
+.hero-stats{
+  display:flex;gap:40px;margin-top:50px;flex-wrap:wrap;
+}
+.hero-stat{display:flex;flex-direction:column;}
+.hero-stat .num{font-size:2.4rem;font-weight:800;color:var(--accent);font-family:'Playfair Display',serif;}
+.hero-stat .label{font-size:.9rem;opacity:.9;text-transform:uppercase;letter-spacing:1px;}
+
+/* SECTIONS */
+section{padding:90px 0;}
+.section-header{text-align:center;margin-bottom:60px;}
+.section-tag{
+  display:inline-block;color:var(--primary);font-weight:700;
+  text-transform:uppercase;letter-spacing:3px;font-size:13px;
+  margin-bottom:12px;
+}
+.section-title{
+  font-size:clamp(2rem,4vw,3rem);
+  color:var(--dark);margin-bottom:18px;
+  line-height:1.15;
+}
+.section-title span{color:var(--primary);}
+.section-subtitle{max-width:680px;margin:0 auto;color:#666;font-size:1.05rem;}
+
+/* ABOUT */
+.about{background:#FFF9F5;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.about-image{position:relative;}
+.about-image img{
+  width:100%;border-radius:20px;box-shadow:var(--shadow-lg);
+}
+.about-image .badge{
+  position:absolute;bottom:-25px;right:-25px;
+  background:var(--gradient);color:#fff;
+  padding:25px 35px;border-radius:18px;
+  box-shadow:var(--shadow-lg);
+}
+.about-image .badge .num{font-size:2.2rem;font-weight:800;font-family:'Playfair Display',serif;}
+.about-image .badge .txt{font-size:.85rem;letter-spacing:1px;text-transform:uppercase;}
+.about-content h2{margin-bottom:20px;}
+.about-content p{color:#555;margin-bottom:18px;font-size:1.02rem;}
+.about-features{list-style:none;margin-top:24px;}
+.about-features li{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:12px 0;color:#444;font-weight:500;
+}
+.about-features li i{
+  flex-shrink:0;width:32px;height:32px;border-radius:50%;
+  background:var(--gradient);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;
+}
+
+/* SERVICES */
+.services{background:#fff;}
+.services-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;
+}
+.service-card{
+  background:#fff;border-radius:20px;overflow:hidden;
+  box-shadow:0 8px 30px rgba(0,0,0,.07);
+  transition:all .4s;
+  border:1px solid rgba(0,0,0,.04);
+}
+.service-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-lg);}
+.service-img{
+  height:230px;overflow:hidden;position:relative;
+}
+.service-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
+.service-card:hover .service-img img{transform:scale(1.1);}
+.service-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.4) 100%);
+}
+.service-body{padding:28px;}
+.service-icon{
+  width:55px;height:55px;border-radius:14px;
+  background:var(--gradient);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;margin-top:-50px;margin-bottom:18px;
+  position:relative;z-index:2;
+  box-shadow:0 8px 20px rgba(255,107,53,.4);
+}
+.service-body h3{font-size:1.4rem;color:var(--dark);margin-bottom:12px;}
+.service-body p{color:#666;margin-bottom:18px;font-size:.95rem;}
+.service-link{
+  color:var(--primary);font-weight:600;text-decoration:none;
+  display:inline-flex;align-items:center;gap:8px;
+  transition:gap .3s;
+}
+.service-link:hover{gap:14px;}
+
+/* VIDEO */
+.video-section{
+  position:relative;padding:120px 0;
+  background:linear-gradient(135deg,var(--dark) 0%,var(--secondary) 100%);
+  color:#fff;overflow:hidden;
+}
+.video-section::before{
+  content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+  background:radial-gradient(circle at 80% 20%,rgba(255,107,53,.2),transparent 50%);
+}
+.video-section .container{position:relative;z-index:2;}
+.video-section .section-tag{color:var(--accent);}
+.video-section .section-title{color:#fff;}
+.video-section .section-subtitle{color:rgba(255,255,255,.85);}
+.video-wrapper{
+  max-width:960px;margin:0 auto;
+  border-radius:24px;overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,.5);
+  position:relative;
+  border:6px solid rgba(255,255,255,.1);
+}
+.video-wrapper video{width:100%;display:block;}
+
+/* GALLERY */
+.gallery{background:#FFF9F5;}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-auto-rows:280px;
+  gap:18px;
+}
+.gallery-item{
+  position:relative;overflow:hidden;border-radius:18px;
+  box-shadow:var(--shadow);
+  cursor:pointer;
+  transition:transform .4s;
+}
+.gallery-item:hover{transform:scale(1.02);}
+.gallery-item img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .8s;
+}
+.gallery-item:hover img{transform:scale(1.12);}
+.gallery-item.tall{grid-row:span 2;}
+.gallery-item::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 50%,rgba(0,78,137,.6) 100%);
+  opacity:0;transition:opacity .4s;
+}
+.gallery-item:hover::after{opacity:1;}
+.gallery-item .label{
+  position:absolute;bottom:20px;left:20px;color:#fff;
+  font-weight:600;z-index:2;opacity:0;transform:translateY(10px);
+  transition:all .4s;
+}
+.gallery-item:hover .label{opacity:1;transform:translateY(0);}
+
+/* TESTIMONIALS */
+.testimonials{
+  background:linear-gradient(135deg,#FFF9F5 0%,#FFE8D6 100%);
+  position:relative;
+}
+.testimonials-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;
+}
+.testimonial{
+  background:#fff;padding:32px 28px;border-radius:20px;
+  box-shadow:var(--shadow);
+  position:relative;transition:transform .3s;
+  border-top:4px solid var(--primary);
+}
+.testimonial:hover{transform:translateY(-8px);}
+.testimonial .quote-icon{
+  position:absolute;top:-20px;right:25px;
+  width:50px;height:50px;border-radius:50%;
+  background:var(--gradient);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;box-shadow:0 6px 20px rgba(255,107,53,.4);
+}
+.stars{color:#FFD23F;margin-bottom:14px;font-size:18px;}
+.testimonial-text{color:#444;font-style:italic;margin-bottom:22px;line-height:1.7;}
+.testimonial-author{display:flex;align-items:center;gap:14px;}
+.avatar{
+  width:50px;height:50px;border-radius:50%;
+  background:var(--gradient-blue);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:18px;
+}
+.author-info .name{font-weight:700;color:var(--dark);}
+.author-info .role{font-size:.85rem;color:#888;}
+
+/* CONTACT */
+.contact{
+  background:linear-gradient(135deg,var(--dark) 0%,var(--secondary) 100%);
+  color:#fff;position:relative;overflow:hidden;
+}
+.contact::before{
+  content:'';position:absolute;top:-100px;right:-100px;
+  width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,107,53,.3),transparent 70%);
+}
+.contact .container{position:relative;z-index:2;}
+.contact .section-title{color:#fff;}
+.contact .section-tag{color:var(--accent);}
+.contact-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px;
+  margin-bottom:50px;
+}
+.contact-card{
+  background:rgba(255,255,255,.08);backdrop-filter:blur(10px);
+  padding:30px;border-radius:18px;
+  border:1px solid rgba(255,255,255,.15);
+  text-align:center;transition:transform .3s;
+}
+.contact-card:hover{transform:translateY(-6px);background:rgba(255,255,255,.12);}
+.contact-icon{
+  width:65px;height:65px;border-radius:50%;
+  background:var(--gradient);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:24px;margin:0 auto 18px;
+  box-shadow:0 8px 25px rgba(255,107,53,.5);
+}
+.contact-card h4{font-size:1.15rem;margin-bottom:8px;color:#fff;}
+.contact-card a,.contact-card p{color:rgba(255,255,255,.85);text-decoration:none;font-size:.95rem;}
+.contact-card a:hover{color:var(--accent);}
+
+.cta-banner{
+  text-align:center;
+  background:var(--gradient);
+  padding:50px 30px;border-radius:24px;
+  box-shadow:0 20px 60px rgba(255,107,53,.4);
+}
+.cta-banner h3{font-size:2rem;color:#fff;margin-bottom:14px;}
+.cta-banner p{color:#fff;opacity:.95;margin-bottom:25px;max-width:600px;margin-left:auto;margin-right:auto;}
+.cta-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.cta-banner .btn-primary{background:#fff;color:var(--primary);box-shadow:0 10px 30px rgba(0,0,0,.2);}
+.cta-banner .btn-primary:hover{background:var(--dark);color:#fff;}
+
+/* FOOTER */
+footer{
+  background:#0E0E1B;color:rgba(255,255,255,.7);
+  padding:60px 0 25px;
+}
+.footer-grid{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;
+}
+.footer-col h4{color:#fff;margin-bottom:20px;font-size:1.1rem;font-family:'Poppins',sans-serif;font-weight:600;}
+.footer-col p,.footer-col a{color:rgba(255,255,255,.65);text-decoration:none;line-height:2;font-size:.95rem;}
+.footer-col a:hover{color:var(--accent);}
+.footer-col ul{list-style:none;}
+.footer-social{display:flex;gap:12px;margin-top:18px;}
+.footer-social a{
+  width:40px;height:40px;border-radius:50%;
+  background:rgba(255,255,255,.1);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .3s;
+}
+.footer-social a:hover{background:var(--primary);transform:translateY(-3px);}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);
+  padding-top:25px;text-align:center;font-size:.9rem;
+}
+
+/* FLOATING WHATSAPP */
+.float-whatsapp{
+  position:fixed;bottom:25px;right:25px;
+  width:62px;height:62px;border-radius:50%;
+  background:#25D366;color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:30px;text-decoration:none;
+  box-shadow:0 8px 25px rgba(37,211,102,.5);
+  z-index:999;
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{
+  0%,100%{box-shadow:0 8px 25px rgba(37,211,102,.5);}
+  50%{box-shadow:0 8px 25px rgba(37,211,102,.5),0 0 0 15px rgba(37,211,102,0);}
+}
+.float-whatsapp:hover{transform:scale(1.1);}
+
+/* FLOATING INSTAGRAM */
+.float-instagram{
+  position:fixed;bottom:100px;right:25px;
+  width:62px;height:62px;border-radius:50%;
+  background:linear-gradient(45deg,#F58529 0%,#DD2A7B 50%,#8134AF 100%);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:30px;text-decoration:none;
+  box-shadow:0 8px 25px rgba(221,42,123,.5);
+  z-index:999;
+  transition:transform .3s;
+}
+.float-instagram:hover{transform:scale(1.1);}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+  .nav-links{
+    display:none;position:absolute;top:100%;left:0;right:0;
+    background:#fff;flex-direction:column;
+    padding:20px;gap:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+  }
+  .nav-links.active{display:flex;}
+  .menu-toggle{display:block;}
+  .about-grid{grid-template-columns:1fr;gap:40px;}
+  .about-image .badge{right:15px;bottom:15px;padding:18px 24px;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:220px;}
+  .gallery-item.tall{grid-row:span 1;}
+  .hero{min-height:auto;padding:80px 0;}
+}
+@media (max-width:560px){
+  .footer-grid{grid-template-columns:1fr;}
+  .top-bar{font-size:12px;}
+  .top-bar .right{display:none;}
+  .hero-stats{gap:25px;}
+  .hero-stat .num{font-size:1.8rem;}
+  .gallery-grid{grid-template-columns:1fr;}
+  .cta-banner h3{font-size:1.4rem;}
+}
+
+/* BEFORE / AFTER GALLERY */
+.ba-grid{display:flex;flex-direction:column;gap:32px;}
+.ba-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  align-items:stretch;
+}
+.ba-item{
+  position:relative;
+  height:340px;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  cursor:pointer;
+  transition:transform .4s;
+}
+.ba-item:hover{transform:scale(1.015);}
+.ba-item img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .7s;
+  display:block;
+}
+.ba-item:hover img{transform:scale(1.08);}
+.ba-item.fit{background:#fff;border:1px solid rgba(0,0,0,.06);}
+.ba-item.fit img{object-fit:contain;transform:scale(1.18);}
+.ba-item.fit:hover img{transform:scale(1.25);}
+.ba-item.fit::after{display:none;}
+.ba-item.fit .ba-caption{
+  background:rgba(255,255,255,.95);
+  color:var(--dark);
+  text-shadow:none;
+  padding:7px 16px;
+  border-radius:50px;
+  display:inline-block;
+  right:auto;
+  box-shadow:0 4px 14px rgba(0,0,0,.12);
+}
+.ba-item::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.45) 100%);
+  pointer-events:none;
+}
+.ba-tag{
+  position:absolute;
+  top:18px;left:18px;
+  padding:8px 20px;
+  border-radius:50px;
+  font-weight:800;
+  font-size:12px;
+  letter-spacing:2.5px;
+  color:#fff;
+  z-index:3;
+  box-shadow:0 6px 20px rgba(0,0,0,.25);
+  text-transform:uppercase;
+}
+.ba-item.before .ba-tag{background:var(--dark);}
+.ba-item.after .ba-tag{background:var(--gradient);}
+.ba-caption{
+  position:absolute;
+  bottom:18px;left:18px;right:18px;
+  color:#fff;
+  font-weight:600;
+  font-size:1rem;
+  z-index:3;
+  text-shadow:0 2px 10px rgba(0,0,0,.5);
+}
+@media (max-width:700px){
+  .ba-row{grid-template-columns:1fr;gap:10px;}
+  .ba-item{height:240px;}
+}
+
+/* LANGUAGE TOGGLE */
+.nav-end{display:flex;align-items:center;gap:14px;}
+.lang-toggle{
+  background:transparent;
+  color:var(--dark);
+  border:2px solid var(--primary);
+  padding:6px 14px;
+  border-radius:50px;
+  font-size:13px;
+  font-weight:700;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  transition:all .3s;
+  font-family:'Poppins',sans-serif;
+  white-space:nowrap;
+}
+.lang-toggle:hover{background:var(--primary);color:#fff;}
+.lang-toggle i{font-size:13px;}
+
+/* MORE SERVICES CARD */
+.service-card.more-card{
+  background:var(--gradient);
+  color:#fff;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;
+  padding:40px 28px;
+  border:none;
+}
+.service-card.more-card:hover{transform:translateY(-10px);box-shadow:0 25px 70px rgba(255,107,53,.5);}
+.more-card .more-icon{
+  width:75px;height:75px;border-radius:50%;
+  background:rgba(255,255,255,.2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:32px;margin-bottom:20px;
+  border:2px solid rgba(255,255,255,.4);
+}
+.more-card h3{color:#fff;font-size:1.5rem;margin-bottom:14px;}
+.more-card p{color:rgba(255,255,255,.95);margin-bottom:22px;font-size:.98rem;line-height:1.6;}
+.more-card .more-btn{
+  background:#fff;color:var(--primary);
+  padding:12px 26px;border-radius:50px;
+  text-decoration:none;font-weight:700;
+  display:inline-flex;align-items:center;gap:8px;
+  transition:all .3s;
+  box-shadow:0 6px 20px rgba(0,0,0,.15);
+}
+.more-card .more-btn:hover{background:var(--dark);color:#fff;transform:scale(1.05);}
+
+/* ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(40px);transition:all .8s;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+
+/* HERO LOAD-IN ANIMATIONS */
+@keyframes heroFadeUp{
+  from{opacity:0;transform:translateY(35px);}
+  to{opacity:1;transform:translateY(0);}
+}
+.hero-content .hero-badge,
+.hero-content h1,
+.hero-content > p,
+.hero-content .hero-buttons .btn,
+.hero-content .hero-stats .hero-stat{
+  opacity:0;
+  animation:heroFadeUp 1s cubic-bezier(.2,.7,.2,1) forwards;
+}
+.hero-content .hero-badge{animation-delay:.15s;}
+.hero-content h1{animation-delay:.35s;}
+.hero-content > p{animation-delay:.6s;}
+.hero-content .hero-buttons .btn:nth-child(1){animation-delay:.85s;}
+.hero-content .hero-buttons .btn:nth-child(2){animation-delay:1s;}
+.hero-content .hero-buttons .btn:nth-child(3){animation-delay:1.15s;}
+.hero-content .hero-buttons .btn:nth-child(4){animation-delay:1.3s;}
+.hero-content .hero-stats .hero-stat:nth-child(1){animation-delay:1.35s;}
+.hero-content .hero-stats .hero-stat:nth-child(2){animation-delay:1.5s;}
+.hero-content .hero-stats .hero-stat:nth-child(3){animation-delay:1.65s;}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <div class="left">
+      <a href="tel:+19296332730"><i class="fas fa-phone"></i>(929) 633-2730</a>
+      <a href="https://wa.me/19296332730" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+      <a href="https://www.instagram.com/torrerogeneralservice?utm_source=qr" target="_blank" rel="noopener"><i class="fab fa-instagram"></i>Instagram</a>
+    </div>
+    <div class="right">
+      <a href="#"><i class="fas fa-map-marker-alt"></i>675 W 187th St, New York, NY 10033</a>
+      <a href="#"><i class="far fa-clock"></i><span data-i18n="topbar.hours">Open · Closes 5 PM</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <a href="#" class="logo">
+      <div class="logo-icon"><img src="-3.PNG" alt="Torrero General Service Logo" /></div>
+      <div class="logo-text">
+        <div class="brand">Torrero</div>
+        <div class="sub">General Service</div>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" data-i18n="nav.home">Home</a></li>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#services" data-i18n="nav.services">Services</a></li>
+      <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
+      <li><a href="#testimonials" data-i18n="nav.reviews">Reviews</a></li>
+      <li><a href="#contact" class="nav-cta"><i class="fas fa-phone"></i> (929) 633-2730</a></li>
+    </ul>
+    <div class="nav-end">
+      <button class="lang-toggle" onclick="toggleLang()" aria-label="Change language">
+        <i class="fas fa-globe"></i><span id="langLabel">ES</span>
+      </button>
+      <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-star"></i> <span data-i18n="hero.badge">TRUSTED NYC REMODELING EXPERTS</span>
+      </div>
+      <h1 data-i18n="hero.title">Transform Your Apartment Into <span>A Masterpiece</span></h1>
+      <p data-i18n="hero.subtitle">Professional painting and complete apartment remodeling in New York City. Quality craftsmanship, honest pricing, and beautiful results that last a lifetime.</p>
+      <div class="hero-buttons">
+        <a href="tel:+19296332730" class="btn btn-primary">
+          <i class="fas fa-phone"></i> <span data-i18n="hero.callNow">Call Now</span>
+        </a>
+        <a href="https://wa.me/19296332730?text=Hello!%20I%20need%20a%20free%20quote%20for%20remodeling." target="_blank" class="btn btn-whatsapp">
+          <i class="fab fa-whatsapp"></i> <span data-i18n="hero.whatsappQuote">WhatsApp Quote</span>
+        </a>
+        <a href="#services" class="btn btn-outline">
+          <span data-i18n="hero.ourServices">Our Services</span> <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="work.html" class="btn btn-work">
+          <i class="fas fa-play"></i> <span data-i18n="hero.seeWork">See Our Work!</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="num">100+</div>
+          <div class="label" data-i18n="hero.stat1">Projects Done</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">5★</div>
+          <div class="label" data-i18n="hero.stat2">Average Rating</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">100%</div>
+          <div class="label" data-i18n="hero.stat3">Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image fade-up">
+        <img src="-1.jpg" alt="Torrero General Service Project" />
+        <div class="badge">
+          <div class="num">10+</div>
+          <div class="txt" data-i18n="about.badge">Years Experience</div>
+        </div>
+      </div>
+      <div class="about-content fade-up">
+        <div class="section-tag" data-i18n="about.tag">About Us</div>
+        <h2 class="section-title" data-i18n="about.title">Your Trusted NYC <span>Remodeling Experts</span></h2>
+        <p data-i18n="about.p1">At <strong>Torrero General Service</strong>, we specialize in transforming apartments throughout New York City. From a fresh coat of paint to complete renovations, our team brings decades of combined experience to every job.</p>
+        <p data-i18n="about.p2">We believe that quality work and honest service are the foundation of every great relationship with our clients. That's why we treat every apartment like our own.</p>
+        <ul class="about-features">
+          <li><i class="fas fa-check"></i> <span data-i18n="about.feature1">Licensed & Insured Professionals</span></li>
+          <li><i class="fas fa-check"></i> <span data-i18n="about.feature2">Free Estimates & Transparent Pricing</span></li>
+          <li><i class="fas fa-check"></i> <span data-i18n="about.feature3">Premium Materials & Modern Techniques</span></li>
+          <li><i class="fas fa-check"></i> <span data-i18n="about.feature4">Same-Day Response & Flexible Scheduling</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag" data-i18n="services.tag">What We Do</div>
+      <h2 class="section-title" data-i18n="services.title">Our <span>Premium Services</span></h2>
+      <p class="section-subtitle" data-i18n="services.subtitle">From small touch-ups to complete apartment makeovers, we deliver exceptional results every time.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-img"><img src="-2.jpg" alt="Interior Painting" /></div>
+        <div class="service-body">
+          <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
+          <h3 data-i18n="services.s1.title">Interior Painting</h3>
+          <p data-i18n="services.s1.desc">Premium-quality paint application with flawless finishes. Walls, ceilings, trim — we handle it all with care.</p>
+          <a href="https://wa.me/19296332730" class="service-link"><span data-i18n="services.getQuote">Get a Quote</span> <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-img"><img src="generated-image (10).png" alt="Apartment Remodeling" /></div>
+        <div class="service-body">
+          <div class="service-icon"><i class="fas fa-hammer"></i></div>
+          <h3 data-i18n="services.s2.title">Apartment Remodeling</h3>
+          <p data-i18n="services.s2.desc">Full-scale renovations that transform your space. From layout changes to finishing touches, we do it right.</p>
+          <a href="https://wa.me/19296332730" class="service-link"><span data-i18n="services.getQuote">Get a Quote</span> <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-img"><img src="generated-image (4).png" alt="Kitchen & Bath" /></div>
+        <div class="service-body">
+          <div class="service-icon"><i class="fas fa-sink"></i></div>
+          <h3 data-i18n="services.s3.title">Kitchen & Bath</h3>
+          <p data-i18n="services.s3.desc">Modernize your kitchen and bathroom with expert installation, tiling, and finishing for stunning results.</p>
+          <a href="https://wa.me/19296332730" class="service-link"><span data-i18n="services.getQuote">Get a Quote</span> <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-img"><img src="generated-image (9).png" alt="Flooring & Tile" /></div>
+        <div class="service-body">
+          <div class="service-icon"><i class="fas fa-th-large"></i></div>
+          <h3 data-i18n="services.s4.title">Flooring & Tile</h3>
+          <p data-i18n="services.s4.desc">Beautiful flooring installation including hardwood, tile, vinyl, and laminate by skilled craftsmen.</p>
+          <a href="https://wa.me/19296332730" class="service-link"><span data-i18n="services.getQuote">Get a Quote</span> <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="service-card more-card fade-up">
+        <div class="more-icon"><i class="fas fa-plus"></i></div>
+        <h3 data-i18n="services.more.title">And More Services</h3>
+        <p data-i18n="services.more.desc">Don't see what you need? We handle a wide range of remodeling and repair projects. Click below to request a free, no-obligation estimate.</p>
+        <a href="https://wa.me/19296332730?text=Hello!%20I%20would%20like%20a%20free%20no-obligation%20estimate." target="_blank" class="more-btn">
+          <i class="fas fa-comment-dots"></i> <span data-i18n="services.more.btn">Request Free Estimate</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="video-section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag" data-i18n="video.tag">See Our Work</div>
+      <h2 class="section-title" data-i18n="video.title">Watch Quality <span style="color:var(--accent)">In Action</span></h2>
+      <p class="section-subtitle" data-i18n="video.subtitle">A behind-the-scenes look at the craftsmanship and care we bring to every project.</p>
+    </div>
+    <div class="video-wrapper fade-up">
+      <video controls poster="generated-image (6).png">
+        <source src="mp_.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag" data-i18n="gallery.tag">Our Portfolio</div>
+      <h2 class="section-title" data-i18n="gallery.title">Recent <span>Transformations</span></h2>
+      <p class="section-subtitle" data-i18n="gallery.subtitle">Take a look at some of our most beautiful projects across New York City.</p>
+    </div>
+    <div class="ba-grid">
+
+      <div class="ba-row fade-up">
+        <div class="ba-item before">
+          <span class="ba-tag" data-i18n="gallery.before">Before</span>
+          <img src="1.png" alt="Before — Project 1" />
+        </div>
+        <div class="ba-item after">
+          <span class="ba-tag" data-i18n="gallery.after">After</span>
+          <img src="2.png" alt="After — Project 1" />
+        </div>
+      </div>
+
+      <div class="ba-row fade-up">
+        <div class="ba-item before fit">
+          <span class="ba-tag" data-i18n="gallery.before">Before</span>
+          <img src="generated-image (3).png" alt="Before — Project 2" />
+        </div>
+        <div class="ba-item after fit">
+          <span class="ba-tag" data-i18n="gallery.after">After</span>
+          <img src="generated-image (4).png" alt="After — Project 2" />
+        </div>
+      </div>
+
+      <div class="ba-row fade-up">
+        <div class="ba-item before">
+          <span class="ba-tag" data-i18n="gallery.before">Before</span>
+          <img src="generated-image (5).png" alt="Before — Project 3" />
+        </div>
+        <div class="ba-item after">
+          <span class="ba-tag" data-i18n="gallery.after">After</span>
+          <img src="generated-image (6).png" alt="After — Project 3" />
+          <div class="ba-caption" data-i18n="gallery.p3">Full Apartment Remodel</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag" data-i18n="reviews.tag">Client Reviews</div>
+      <h2 class="section-title" data-i18n="reviews.title">What Our <span>Customers Say</span></h2>
+      <p class="section-subtitle" data-i18n="reviews.subtitle">Real reviews from real clients across New York City.</p>
+    </div>
+    <div class="testimonials-grid">
+
+      <div class="testimonial fade-up">
+        <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text" data-i18n="reviews.r1.text">"Torrero transformed my entire apartment in Washington Heights. The painting work was absolutely flawless and the attention to detail was incredible. Best decision I made — highly recommend!"</p>
+        <div class="testimonial-author">
+          <div class="avatar">MR</div>
+          <div class="author-info">
+            <div class="name">Maria Rodriguez</div>
+            <div class="role">Washington Heights, NYC</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial fade-up">
+        <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text" data-i18n="reviews.r2.text">"Professional from start to finish. They remodeled my kitchen and bathroom on time and within budget. The team was respectful, clean, and the quality is outstanding. I'm so happy!"</p>
+        <div class="testimonial-author">
+          <div class="avatar">JC</div>
+          <div class="author-info">
+            <div class="name">James Chen</div>
+            <div class="role">Inwood, NYC</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial fade-up">
+        <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text" data-i18n="reviews.r3.text">"Honest pricing, excellent communication, and beautiful results. They painted my entire two-bedroom and you can't see a single brush mark. Truly skilled craftsmen who care about their work."</p>
+        <div class="testimonial-author">
+          <div class="avatar">SP</div>
+          <div class="author-info">
+            <div class="name">Sandra Pérez</div>
+            <div class="role">Harlem, NYC</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial fade-up">
+        <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text" data-i18n="reviews.r4.text">"I am very happy with the work done by Andres. He came to my house and installed three ceiling lights today. He was on time, informative & very friendly. The pricing was amazing and my ceiling lights came out looking and working perfectly. 10/10 Recommend!!! 🙌🏼"</p>
+        <div class="testimonial-author">
+          <div class="avatar">NS</div>
+          <div class="author-info">
+            <div class="name">Nacheiry Savinon</div>
+            <div class="role" data-i18n="reviews.r4.role">Google Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial fade-up">
+        <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text" data-i18n="reviews.r5.text">"They did such a great job renovating my kitchen, I love it soo much! Recommend 10 out of 10. They were so nice and informative. Great pricing!"</p>
+        <div class="testimonial-author">
+          <div class="avatar">BR</div>
+          <div class="author-info">
+            <div class="name">Bianca Rivera</div>
+            <div class="role" data-i18n="reviews.r5.role">Google Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial fade-up">
+        <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text" data-i18n="reviews.r6.text">"I am very satisfied with the work done by Andrés, which is impeccable. I can recommend his work. Thank you, Andrés."</p>
+        <div class="testimonial-author">
+          <div class="avatar">DR</div>
+          <div class="author-info">
+            <div class="name">Dulva Reyes</div>
+            <div class="role" data-i18n="reviews.r6.role">Google Review</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag" data-i18n="contact.tag">Get In Touch</div>
+      <h2 class="section-title" data-i18n="contact.title">Contact Us <span style="color:var(--accent)">Today</span></h2>
+      <p class="section-subtitle" style="color:rgba(255,255,255,.8);" data-i18n="contact.subtitle">Reach out for a free estimate. We respond fast and treat every customer like family.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card fade-up">
+        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+        <h4 data-i18n="contact.callUs">Call Us</h4>
+        <a href="tel:+19296332730">(929) 633-2730</a>
+        <p style="margin-top:6px;font-size:.85rem;opacity:.75;" data-i18n="contact.callNote">Call or Text Anytime</p>
+      </div>
+      <div class="contact-card fade-up">
+        <div class="contact-icon" style="background:#25D366;"><i class="fab fa-whatsapp"></i></div>
+        <h4 data-i18n="contact.whatsapp">WhatsApp</h4>
+        <a href="https://wa.me/19296332730" target="_blank" data-i18n="contact.chat">Chat With Us</a>
+        <p style="margin-top:6px;font-size:.85rem;opacity:.75;">(929) 633-2730</p>
+      </div>
+      <div class="contact-card fade-up">
+        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <h4 data-i18n="contact.visit">Visit Us</h4>
+        <p data-i18n="contact.address">675 W 187th St Broadway<br/>New York, NY 10033</p>
+      </div>
+      <div class="contact-card fade-up">
+        <div class="contact-icon"><i class="far fa-clock"></i></div>
+        <h4 data-i18n="contact.hours">Business Hours</h4>
+        <p data-i18n="contact.hoursText">Mon — Sat<br/>Open · Closes 5 PM</p>
+      </div>
+    </div>
+
+    <div class="cta-banner fade-up">
+      <h3 data-i18n="cta.title">Ready To Start Your Project?</h3>
+      <p data-i18n="cta.text">Get a free, no-obligation quote today. Our team is standing by to make your dream apartment a reality.</p>
+      <div class="cta-buttons">
+        <a href="tel:+19296332730" class="btn btn-primary">
+          <i class="fas fa-phone"></i> <span data-i18n="cta.call">Call (929) 633-2730</span>
+        </a>
+        <a href="https://wa.me/19296332730?text=Hi%20Torrero!%20I%20would%20like%20a%20free%20estimate." target="_blank" class="btn btn-whatsapp">
+          <i class="fab fa-whatsapp"></i> <span data-i18n="cta.whatsapp">Text on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="#" class="logo" style="margin-bottom:20px;">
+          <div class="logo-icon"><img src="-3.PNG" alt="Torrero General Service Logo" /></div>
+          <div class="logo-text">
+            <div class="brand" style="color:#fff;">Torrero</div>
+            <div class="sub">General Service</div>
+          </div>
+        </a>
+        <p data-i18n="footer.about">Professional apartment remodeling and painting services across New York City. Quality craftsmanship since day one.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/torrerogeneralservice?utm_source=qr" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/19296332730" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.google.com/maps/search/?api=1&query=675+W+187th+St+New+York+NY+10033" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.quickLinks">Quick Links</h4>
+        <ul>
+          <li><a href="#home" data-i18n="nav.home">Home</a></li>
+          <li><a href="#about" data-i18n="footer.aboutUs">About Us</a></li>
+          <li><a href="#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
+          <li><a href="#testimonials" data-i18n="nav.reviews">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.services">Services</h4>
+        <ul>
+          <li><a href="#services" data-i18n="services.s1.title">Interior Painting</a></li>
+          <li><a href="#services" data-i18n="services.s2.title">Apartment Remodeling</a></li>
+          <li><a href="#services" data-i18n="services.s3.title">Kitchen & Bath</a></li>
+          <li><a href="#services" data-i18n="services.s4.title">Flooring & Tile</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.contact">Contact</h4>
+        <ul>
+          <li><i class="fas fa-phone" style="color:var(--primary);margin-right:8px;"></i><a href="tel:+19296332730">(929) 633-2730</a></li>
+          <li><i class="fab fa-whatsapp" style="color:#25D366;margin-right:8px;"></i><a href="https://wa.me/19296332730" target="_blank">WhatsApp</a></li>
+          <li><i class="fas fa-map-marker-alt" style="color:var(--primary);margin-right:8px;"></i>675 W 187th St, NY 10033</li>
+          <li><i class="far fa-clock" style="color:var(--primary);margin-right:8px;"></i><span data-i18n="topbar.hours">Open · Closes 5 PM</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer.copyright">© 2026 Torrero General Service. All rights reserved. | Apartment Remodeling & Painting NYC</p>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/19296332730?text=Hello!%20I%20need%20a%20quote%20for%20remodeling." class="float-whatsapp" target="_blank" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- FLOATING INSTAGRAM -->
+<a href="https://www.instagram.com/torrerogeneralservice?utm_source=qr" class="float-instagram" target="_blank" rel="noopener" aria-label="Instagram">
+  <i class="fab fa-instagram"></i>
+</a>
+
+<script>
+// Scroll animations
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('visible');}
+  });
+},{threshold:0.12});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+
+// Close menu on link click
+document.querySelectorAll('.nav-links a').forEach(a=>{
+  a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('active'));
+});
+
+// ===== LANGUAGE TOGGLE (EN / ES) =====
+const i18n = {
+  en: {
+    'topbar.hours': 'Open · Closes 5 PM',
+    'nav.home': 'Home',
+    'nav.about': 'About',
+    'nav.services': 'Services',
+    'nav.gallery': 'Gallery',
+    'nav.reviews': 'Reviews',
+    'hero.badge': 'TRUSTED NYC REMODELING EXPERTS',
+    'hero.title': 'Transform Your Apartment Into <span>A Masterpiece</span>',
+    'hero.subtitle': 'Professional painting and complete apartment remodeling in New York City. Quality craftsmanship, honest pricing, and beautiful results that last a lifetime.',
+    'hero.callNow': 'Call Now',
+    'hero.whatsappQuote': 'WhatsApp Quote',
+    'hero.ourServices': 'Our Services',
+    'hero.seeWork': 'See Our Work!',
+    'hero.stat1': 'Projects Done',
+    'hero.stat2': 'Average Rating',
+    'hero.stat3': 'Satisfaction',
+    'about.tag': 'About Us',
+    'about.title': 'Your Trusted NYC <span>Remodeling Experts</span>',
+    'about.p1': 'At <strong>Torrero General Service</strong>, we specialize in transforming apartments throughout New York City. From a fresh coat of paint to complete renovations, our team brings decades of combined experience to every job.',
+    'about.p2': "We believe that quality work and honest service are the foundation of every great relationship with our clients. That's why we treat every apartment like our own.",
+    'about.feature1': 'Licensed & Insured Professionals',
+    'about.feature2': 'Free Estimates & Transparent Pricing',
+    'about.feature3': 'Premium Materials & Modern Techniques',
+    'about.feature4': 'Same-Day Response & Flexible Scheduling',
+    'about.badge': 'Years Experience',
+    'services.tag': 'What We Do',
+    'services.title': 'Our <span>Premium Services</span>',
+    'services.subtitle': 'From small touch-ups to complete apartment makeovers, we deliver exceptional results every time.',
+    'services.s1.title': 'Interior Painting',
+    'services.s1.desc': 'Premium-quality paint application with flawless finishes. Walls, ceilings, trim — we handle it all with care.',
+    'services.s2.title': 'Apartment Remodeling',
+    'services.s2.desc': 'Full-scale renovations that transform your space. From layout changes to finishing touches, we do it right.',
+    'services.s3.title': 'Kitchen & Bath',
+    'services.s3.desc': 'Modernize your kitchen and bathroom with expert installation, tiling, and finishing for stunning results.',
+    'services.s4.title': 'Flooring & Tile',
+    'services.s4.desc': 'Beautiful flooring installation including hardwood, tile, vinyl, and laminate by skilled craftsmen.',
+    'services.getQuote': 'Get a Quote',
+    'services.more.title': 'And More Services',
+    'services.more.desc': "Don't see what you need? We handle a wide range of remodeling and repair projects. Click below to request a free, no-obligation estimate.",
+    'services.more.btn': 'Request Free Estimate',
+    'video.tag': 'See Our Work',
+    'video.title': 'Watch Quality <span style="color:var(--accent)">In Action</span>',
+    'video.subtitle': 'A behind-the-scenes look at the craftsmanship and care we bring to every project.',
+    'gallery.tag': 'Our Portfolio',
+    'gallery.title': 'Recent <span>Transformations</span>',
+    'gallery.subtitle': 'Take a look at some of our most beautiful projects across New York City.',
+    'gallery.before': 'Before',
+    'gallery.after': 'After',
+    'gallery.p1': 'Modern Living Room Paint',
+    'gallery.p2': 'Kitchen Renovation',
+    'gallery.p3': 'Full Apartment Remodel',
+    'reviews.tag': 'Client Reviews',
+    'reviews.title': 'What Our <span>Customers Say</span>',
+    'reviews.subtitle': 'Real reviews from real clients across New York City.',
+    'reviews.r1.text': '"Torrero transformed my entire apartment in Washington Heights. The painting work was absolutely flawless and the attention to detail was incredible. Best decision I made — highly recommend!"',
+    'reviews.r2.text': "\"Professional from start to finish. They remodeled my kitchen and bathroom on time and within budget. The team was respectful, clean, and the quality is outstanding. I'm so happy!\"",
+    'reviews.r3.text': "\"Honest pricing, excellent communication, and beautiful results. They painted my entire two-bedroom and you can't see a single brush mark. Truly skilled craftsmen who care about their work.\"",
+    'reviews.r4.text': '"I am very happy with the work done by Andres. He came to my house and installed three ceiling lights today. He was on time, informative & very friendly. The pricing was amazing and my ceiling lights came out looking and working perfectly. 10/10 Recommend!!! 🙌🏼"',
+    'reviews.r4.role': 'Google Review',
+    'reviews.r5.text': '"They did such a great job renovating my kitchen, I love it soo much! Recommend 10 out of 10. They were so nice and informative. Great pricing!"',
+    'reviews.r5.role': 'Google Review',
+    'reviews.r6.text': '"I am very satisfied with the work done by Andrés, which is impeccable. I can recommend his work. Thank you, Andrés."',
+    'reviews.r6.role': 'Google Review',
+    'contact.tag': 'Get In Touch',
+    'contact.title': 'Contact Us <span style="color:var(--accent)">Today</span>',
+    'contact.subtitle': 'Reach out for a free estimate. We respond fast and treat every customer like family.',
+    'contact.callUs': 'Call Us',
+    'contact.callNote': 'Call or Text Anytime',
+    'contact.whatsapp': 'WhatsApp',
+    'contact.chat': 'Chat With Us',
+    'contact.visit': 'Visit Us',
+    'contact.address': '675 W 187th St Broadway<br/>New York, NY 10033',
+    'contact.hours': 'Business Hours',
+    'contact.hoursText': 'Mon — Sat<br/>Open · Closes 5 PM',
+    'cta.title': 'Ready To Start Your Project?',
+    'cta.text': 'Get a free, no-obligation quote today. Our team is standing by to make your dream apartment a reality.',
+    'cta.call': 'Call (929) 633-2730',
+    'cta.whatsapp': 'Text on WhatsApp',
+    'footer.about': 'Professional apartment remodeling and painting services across New York City. Quality craftsmanship since day one.',
+    'footer.quickLinks': 'Quick Links',
+    'footer.aboutUs': 'About Us',
+    'footer.services': 'Services',
+    'footer.contact': 'Contact',
+    'footer.copyright': '© 2026 Torrero General Service. All rights reserved. | Apartment Remodeling & Painting NYC'
+  },
+  es: {
+    'topbar.hours': 'Abierto · Cierra a las 5 PM',
+    'nav.home': 'Inicio',
+    'nav.about': 'Nosotros',
+    'nav.services': 'Servicios',
+    'nav.gallery': 'Galería',
+    'nav.reviews': 'Reseñas',
+    'hero.badge': 'EXPERTOS DE CONFIANZA EN REMODELACIÓN NYC',
+    'hero.title': 'Transforma Tu Apartamento En <span>Una Obra Maestra</span>',
+    'hero.subtitle': 'Pintura profesional y remodelación completa de apartamentos en la ciudad de Nueva York. Trabajo de calidad, precios honestos y resultados hermosos que duran toda la vida.',
+    'hero.callNow': 'Llamar Ahora',
+    'hero.whatsappQuote': 'Cotización por WhatsApp',
+    'hero.ourServices': 'Nuestros Servicios',
+    'hero.seeWork': '¡Vea Nuestro Trabajo!',
+    'hero.stat1': 'Proyectos Realizados',
+    'hero.stat2': 'Calificación Promedio',
+    'hero.stat3': 'Satisfacción',
+    'about.tag': 'Sobre Nosotros',
+    'about.title': 'Sus Expertos de Confianza en <span>Remodelación NYC</span>',
+    'about.p1': 'En <strong>Torrero General Service</strong>, nos especializamos en transformar apartamentos en toda la ciudad de Nueva York. Desde una mano de pintura fresca hasta renovaciones completas, nuestro equipo aporta décadas de experiencia combinada a cada trabajo.',
+    'about.p2': 'Creemos que el trabajo de calidad y el servicio honesto son la base de toda gran relación con nuestros clientes. Por eso tratamos cada apartamento como si fuera nuestro.',
+    'about.feature1': 'Profesionales con Licencia y Seguro',
+    'about.feature2': 'Estimados Gratis y Precios Transparentes',
+    'about.feature3': 'Materiales Premium y Técnicas Modernas',
+    'about.feature4': 'Respuesta el Mismo Día y Horarios Flexibles',
+    'about.badge': 'Años de Experiencia',
+    'services.tag': 'Lo Que Hacemos',
+    'services.title': 'Nuestros <span>Servicios Premium</span>',
+    'services.subtitle': 'Desde pequeños retoques hasta renovaciones completas de apartamentos, entregamos resultados excepcionales siempre.',
+    'services.s1.title': 'Pintura Interior',
+    'services.s1.desc': 'Aplicación de pintura de calidad premium con acabados impecables. Paredes, techos, molduras — lo hacemos todo con cuidado.',
+    'services.s2.title': 'Remodelación de Apartamentos',
+    'services.s2.desc': 'Renovaciones completas que transforman su espacio. Desde cambios de diseño hasta los toques finales, lo hacemos bien.',
+    'services.s3.title': 'Cocina y Baño',
+    'services.s3.desc': 'Modernice su cocina y baño con instalación experta, azulejos y acabados para resultados impresionantes.',
+    'services.s4.title': 'Pisos y Azulejos',
+    'services.s4.desc': 'Hermosa instalación de pisos incluyendo madera, azulejo, vinilo y laminado por artesanos calificados.',
+    'services.getQuote': 'Pedir Cotización',
+    'services.more.title': 'Y Más Servicios',
+    'services.more.desc': '¿No ve lo que necesita? Manejamos una amplia variedad de proyectos de remodelación y reparación. Haga clic abajo para solicitar un estimado gratis y sin compromiso.',
+    'services.more.btn': 'Solicitar Estimado Gratis',
+    'video.tag': 'Vea Nuestro Trabajo',
+    'video.title': 'Vea la Calidad <span style="color:var(--accent)">En Acción</span>',
+    'video.subtitle': 'Una mirada tras bambalinas a la artesanía y el cuidado que aportamos a cada proyecto.',
+    'gallery.tag': 'Nuestro Portafolio',
+    'gallery.title': 'Transformaciones <span>Recientes</span>',
+    'gallery.subtitle': 'Eche un vistazo a algunos de nuestros proyectos más hermosos en toda la ciudad de Nueva York.',
+    'gallery.before': 'Antes',
+    'gallery.after': 'Después',
+    'gallery.p1': 'Pintura Moderna de Sala',
+    'gallery.p2': 'Renovación de Cocina',
+    'gallery.p3': 'Remodelación Completa',
+    'reviews.tag': 'Reseñas de Clientes',
+    'reviews.title': 'Lo Que Dicen <span>Nuestros Clientes</span>',
+    'reviews.subtitle': 'Reseñas reales de clientes reales en toda la ciudad de Nueva York.',
+    'reviews.r1.text': '"Torrero transformó todo mi apartamento en Washington Heights. El trabajo de pintura fue absolutamente impecable y la atención al detalle increíble. ¡La mejor decisión que tomé — altamente recomendado!"',
+    'reviews.r2.text': '"Profesionales de principio a fin. Remodelaron mi cocina y baño a tiempo y dentro del presupuesto. El equipo fue respetuoso, limpio, y la calidad es excepcional. ¡Estoy muy feliz!"',
+    'reviews.r3.text': '"Precios honestos, excelente comunicación y resultados hermosos. Pintaron todo mi apartamento de dos habitaciones y no se ve ni una sola marca de brocha. Verdaderos artesanos calificados que se preocupan por su trabajo."',
+    'reviews.r4.text': '"Estoy muy contenta con el trabajo realizado por Andrés. Vino a mi casa e instaló tres lámparas de techo hoy. Llegó puntual, informativo y muy amable. El precio fue increíble y mis lámparas quedaron luciendo y funcionando perfectamente. ¡10/10 lo recomiendo! 🙌🏼"',
+    'reviews.r4.role': 'Reseña de Google',
+    'reviews.r5.text': '"¡Hicieron un excelente trabajo renovando mi cocina, me encanta muchísimo! Lo recomiendo 10 de 10. Fueron muy amables e informativos. ¡Precios excelentes!"',
+    'reviews.r5.role': 'Reseña de Google',
+    'reviews.r6.text': '"Estoy muy satisfecha con el trabajo realizado por Andrés, que es impecable. Puedo recomendar su trabajo. Gracias, Andrés."',
+    'reviews.r6.role': 'Reseña de Google',
+    'contact.tag': 'Póngase En Contacto',
+    'contact.title': 'Contáctenos <span style="color:var(--accent)">Hoy</span>',
+    'contact.subtitle': 'Comuníquese para un estimado gratis. Respondemos rápido y tratamos a cada cliente como familia.',
+    'contact.callUs': 'Llámenos',
+    'contact.callNote': 'Llame o Envíe Texto En Cualquier Momento',
+    'contact.whatsapp': 'WhatsApp',
+    'contact.chat': 'Chatee Con Nosotros',
+    'contact.visit': 'Visítenos',
+    'contact.address': '675 W 187th St Broadway<br/>New York, NY 10033',
+    'contact.hours': 'Horario',
+    'contact.hoursText': 'Lun — Sáb<br/>Abierto · Cierra a las 5 PM',
+    'cta.title': '¿Listo Para Comenzar Su Proyecto?',
+    'cta.text': 'Obtenga una cotización gratis y sin compromiso hoy. Nuestro equipo está listo para hacer realidad el apartamento de sus sueños.',
+    'cta.call': 'Llamar (929) 633-2730',
+    'cta.whatsapp': 'Enviar Mensaje por WhatsApp',
+    'footer.about': 'Servicios profesionales de remodelación y pintura de apartamentos en toda la ciudad de Nueva York. Calidad artesanal desde el primer día.',
+    'footer.quickLinks': 'Enlaces Rápidos',
+    'footer.aboutUs': 'Nosotros',
+    'footer.services': 'Servicios',
+    'footer.contact': 'Contacto',
+    'footer.copyright': '© 2026 Torrero General Service. Todos los derechos reservados. | Remodelación y Pintura de Apartamentos NYC'
+  }
+};
+
+let currentLang = localStorage.getItem('lang') || 'en';
+
+function setLang(lang){
+  if(!i18n[lang]) return;
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(i18n[lang][key] !== undefined){
+      el.innerHTML = i18n[lang][key];
+    }
+  });
+  const label = document.getElementById('langLabel');
+  if(label) label.textContent = lang === 'en' ? 'ES' : 'EN';
+  localStorage.setItem('lang', lang);
+}
+
+function toggleLang(){
+  setLang(currentLang === 'en' ? 'es' : 'en');
+}
+
+setLang(currentLang);
+</script>
+
+</body>
+</html>

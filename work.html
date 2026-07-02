@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Our Work | Torrero General Service — Video Portfolio</title>
+<meta name="description" content="Watch real apartment remodeling and painting projects by Torrero General Service in New York City." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{
+  --primary:#FF6B35;
+  --secondary:#004E89;
+  --accent:#FFD23F;
+  --dark:#1A1A2E;
+  --gradient:linear-gradient(135deg,#FF6B35 0%,#F7931E 50%,#FFD23F 100%);
+  --gradient-blue:linear-gradient(135deg,#004E89 0%,#1B6CA8 100%);
+  --shadow:0 10px 40px rgba(0,0,0,0.1);
+  --shadow-lg:0 20px 60px rgba(0,0,0,0.15);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Poppins',sans-serif;color:#333;line-height:1.6;background:#0E0E1B;}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:700;}
+.container{max-width:1240px;margin:0 auto;padding:0 24px;}
+
+/* NAV */
+.navbar{
+  background:#fff;box-shadow:0 2px 15px rgba(0,0,0,.08);
+  position:sticky;top:0;z-index:1000;padding:14px 0;
+}
+.navbar .container{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-icon{width:52px;height:52px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.logo-icon img{width:100%;height:100%;object-fit:contain;display:block;}
+.logo-text .brand{font-family:'Playfair Display',serif;font-weight:800;font-size:20px;color:var(--dark);line-height:1;}
+.logo-text .sub{font-size:10px;color:var(--primary);font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+.back-btn{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--gradient);color:#fff;text-decoration:none;
+  padding:11px 22px;border-radius:50px;font-weight:600;font-size:15px;
+  box-shadow:0 6px 18px rgba(255,107,53,.4);transition:all .3s;
+}
+.back-btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(255,107,53,.6);}
+
+/* HERO STRIP */
+.work-hero{
+  background:linear-gradient(135deg,var(--dark) 0%,var(--secondary) 100%);
+  color:#fff;text-align:center;padding:70px 0 60px;position:relative;overflow:hidden;
+}
+.work-hero::before{
+  content:'';position:absolute;top:-120px;right:-80px;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,107,53,.28),transparent 70%);
+}
+.work-hero .container{position:relative;z-index:2;}
+.work-hero .tag{
+  display:inline-block;color:var(--accent);font-weight:700;text-transform:uppercase;
+  letter-spacing:3px;font-size:13px;margin-bottom:12px;
+}
+.work-hero h1{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:16px;}
+.work-hero h1 span{color:var(--accent);}
+.work-hero p{max-width:640px;margin:0 auto;color:rgba(255,255,255,.85);font-size:1.05rem;}
+
+/* VIDEO GRID */
+.work-section{padding:70px 0 90px;}
+.video-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:30px;
+}
+.video-card{
+  background:#181829;border-radius:20px;overflow:hidden;
+  box-shadow:var(--shadow-lg);border:1px solid rgba(255,255,255,.06);
+  transition:transform .35s;
+}
+.video-card:hover{transform:translateY(-8px);}
+.video-frame{position:relative;width:100%;aspect-ratio:16/9;background:#000;}
+.video-frame video,.video-frame iframe{
+  position:absolute;inset:0;width:100%;height:100%;border:0;display:block;object-fit:contain;background:#000;
+}
+.video-body{padding:20px 22px 24px;}
+.video-body h3{color:#fff;font-size:1.25rem;margin-bottom:6px;}
+.video-body p{color:rgba(255,255,255,.6);font-size:.92rem;}
+
+/* EMPTY STATE */
+.empty{
+  text-align:center;color:rgba(255,255,255,.7);padding:60px 20px;
+  background:#181829;border-radius:20px;border:1px dashed rgba(255,255,255,.15);
+}
+.empty i{font-size:46px;color:var(--primary);margin-bottom:18px;}
+.empty h3{color:#fff;margin-bottom:10px;font-size:1.4rem;}
+.empty code{background:rgba(255,255,255,.1);padding:3px 9px;border-radius:6px;color:var(--accent);font-size:.9rem;}
+
+/* FOOTER */
+footer{background:#080810;color:rgba(255,255,255,.6);padding:34px 0;text-align:center;font-size:.9rem;}
+footer a{color:var(--accent);text-decoration:none;}
+
+/* FLOATING WHATSAPP */
+.float-whatsapp{
+  position:fixed;bottom:25px;right:25px;width:60px;height:60px;border-radius:50%;
+  background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;
+  font-size:29px;text-decoration:none;box-shadow:0 8px 25px rgba(37,211,102,.5);z-index:999;
+}
+.float-whatsapp:hover{transform:scale(1.1);}
+
+@media (max-width:560px){
+  .video-grid{grid-template-columns:1fr;}
+  .navbar .container{justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><img src="-3.PNG" alt="Torrero General Service Logo" /></div>
+      <div class="logo-text">
+        <div class="brand">Torrero</div>
+        <div class="sub">General Service</div>
+      </div>
+    </a>
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="work-hero">
+  <div class="container">
+    <div class="tag">Our Portfolio</div>
+    <h1>See Our <span>Work In Action</span></h1>
+    <p>Real apartment remodeling and painting projects across New York City. Watch the craftsmanship for yourself.</p>
+  </div>
+</header>
+
+<!-- VIDEOS -->
+<section class="work-section">
+  <div class="container">
+    <div class="video-grid" id="videoGrid"></div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Torrero General Service · <a href="tel:+19296332730">(929) 633-2730</a> · <a href="https://wa.me/19296332730" target="_blank">WhatsApp</a></p>
+</footer>
+
+<a href="https://wa.me/19296332730" class="float-whatsapp" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+/* =====================================================================
+   ADD YOUR VIDEOS HERE  👇
+   ---------------------------------------------------------------------
+   Copy one block, change the details, and add a comma at the end.
+
+   • Local video file (uploaded in the "videos" folder):
+       { type: "local", src: "videos/my-video.mp4", poster: "", title: "Title", desc: "Short description" }
+
+   • YouTube video (recommended for BIG/heavy videos — free & fast):
+       { type: "youtube", src: "YOUTUBE_VIDEO_ID", title: "Title", desc: "Short description" }
+       (the ID is the part after  watch?v=  in the YouTube link)
+   ===================================================================== */
+const VIDEOS = [
+
+  { type: "local", src: "mp_.mp4", poster: "generated-image (6).png",
+    title: "Full Apartment Remodel", desc: "Complete renovation project · NYC" },
+
+  { type: "local", src: "VIDEO-2026-05-24-15-21-04.MP4", title: "Project Walkthrough #1",  desc: "Torrero General Service · New York City" },
+  { type: "local", src: "VIDEO-2026-05-24-15-21-09.MP4", title: "Project Walkthrough #2",  desc: "Torrero General Service · New York City" },
+  { type: "local", src: "VIDEO-2026-05-24-15-21-27.MP4", title: "Project Walkthrough #3",  desc: "Torrero General Service · New York City" },
+  { type: "local", src: "VIDEO-2026-05-24-15-21-38.MP4", title: "Project Walkthrough #4",  desc: "Torrero General Service · New York City" },
+  { type: "local", src: "VIDEO-2026-05-24-15-22-35.MP4", title: "Project Walkthrough #5",  desc: "Torrero General Service · New York City" },
+  { type: "local", src: "VIDEO-2026-05-24-15-22-38.MP4", title: "Project Walkthrough #6",  desc: "Torrero General Service · New York City" },
+  { type: "local", src: "VIDEO-2026-05-24-15-22-40.MP4", title: "Project Walkthrough #7",  desc: "Torrero General Service · New York City" },
+  { type: "local", src: "VIDEO-2026-05-24-15-22-42.MP4", title: "Project Walkthrough #8",  desc: "Torrero General Service · New York City" },
+  { type: "local", src: "VIDEO-2026-05-24-15-22-51.MP4", title: "Project Walkthrough #9",  desc: "Torrero General Service · New York City" },
+  { type: "local", src: "VIDEO-2026-05-24-15-26-16.MP4", title: "Project Walkthrough #10", desc: "Torrero General Service · New York City" },
+  { type: "local", src: "VIDEO-2026-05-24-15-26-29.MP4", title: "Project Walkthrough #11", desc: "Torrero General Service · New York City" },
+  { type: "local", src: "VIDEO-2026-05-24-15-26-34.MP4", title: "Project Walkthrough #12", desc: "Torrero General Service · New York City" },
+  { type: "local", src: "VIDEO-2026-05-24-21-16-22.MP4", title: "Project Walkthrough #13", desc: "Torrero General Service · New York City" },
+
+  // ---- Add more videos below this line ----
+  // { type: "local",   src: "videos/kitchen.mp4", poster: "", title: "Kitchen Remodel",  desc: "Washington Heights" },
+  // { type: "youtube", src: "dQw4w9WgXcQ",                     title: "Bathroom Makeover", desc: "Inwood, NYC" },
+
+];
+
+/* ---- Renders the grid (no need to edit below) ---- */
+const grid = document.getElementById('videoGrid');
+if (!VIDEOS.length) {
+  grid.innerHTML = `<div class="empty">
+    <i class="fas fa-film"></i>
+    <h3>No videos added yet</h3>
+    <p>Open <code>work.html</code> and add your videos to the <code>VIDEOS</code> list near the bottom.</p>
+  </div>`;
+} else {
+  grid.innerHTML = VIDEOS.map(v => {
+    const media = v.type === 'youtube'
+      ? `<iframe src="https://www.youtube.com/embed/${v.src}" title="${v.title||''}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`
+      : `<video controls preload="metadata" ${v.poster ? `poster="${v.poster}"` : ''}>
+           <source src="${v.src}" type="video/mp4">
+           Your browser does not support video.
+         </video>`;
+    return `<div class="video-card">
+      <div class="video-frame">${media}</div>
+      <div class="video-body">
+        ${v.title ? `<h3>${v.title}</h3>` : ''}
+        ${v.desc ? `<p>${v.desc}</p>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+}
+</script>
+
+</body>
+</html>
